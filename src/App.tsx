@@ -4,7 +4,7 @@ import { Content } from './components/Content';
 
 import './styles/global.scss';
 
-import { MoviesProvider } from './hooks/GenreSelected';
+import { MoviesProvider } from './hooks/MoviesContext';
 
 export function App() {
   return(

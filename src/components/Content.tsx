@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MovieCard } from "./MovieCard";
-import { MoviesContext } from "../hooks/GenreSelected";
+import { MoviesContext } from "../hooks/MoviesContext";
 
 import '../styles/content.scss'
 

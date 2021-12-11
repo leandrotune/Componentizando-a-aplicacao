@@ -22,7 +22,7 @@ interface MovieProps {
     Runtime: string;
 }
 
-interface Context {
+interface MoviesContextData {
     genres: GenreResponseProps[]
     selectedGenreId: number
     selectedGenre: GenreResponseProps
@@ -30,7 +30,7 @@ interface Context {
     movies: MovieProps[]
 }
 
-export const MoviesContext = createContext<Context>({} as Context)
+export const MoviesContext = createContext<MoviesContextData>({} as MoviesContextData)
 
 export function MoviesProvider( {children} :GenreSelectedProviderProps) {
     const [selectedGenreId, setSelectedGenreId] = useState(1);
@@ -68,4 +68,6 @@ export function MoviesProvider( {children} :GenreSelectedProviderProps) {
 
 export function useMovies() {
     const context = useContext(MoviesContext)
+
+    return context
 }
