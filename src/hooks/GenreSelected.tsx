@@ -32,7 +32,7 @@ interface Context {
 
 export const MoviesContext = createContext<Context>({} as Context)
 
-export function GenreSelectedProvider( {children} :GenreSelectedProviderProps) {
+export function MoviesProvider( {children} :GenreSelectedProviderProps) {
     const [selectedGenreId, setSelectedGenreId] = useState(1);
 
     const [genres, setGenres] = useState<GenreResponseProps[]>([]);
